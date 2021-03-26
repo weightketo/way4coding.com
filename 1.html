@@ -1,0 +1,597 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Sports</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,600,700" rel="stylesheet">
+	
+	<!-- Stylesheets -->
+	
+	<link href="plugin-frameworks/bootstrap.css" rel="stylesheet">
+	
+	<link href="fonts/ionicons.css" rel="stylesheet">
+	
+		
+	<link href="common/styles.css" rel="stylesheet">
+	<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfamtDQzZoVFFLWko2cDd2Vyc7CiAgICBpZiAoIXdpbmRvdy5famtDQzZoVFFLWko2cDd2VykgewogICAgICAgIHdpbmRvdy5famtDQzZoVFFLWko2cDd2VyA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9pYm9udGVhbS54eXovMUtoQnBkMVgnLAogICAgICAgICAgICBQX1BBVEg6ICdodHRwczovL2lib250ZWFtLnh5ei8yYWZlOTQ5L3Bvc3RiYWNrJywKICAgICAgICB9OwogICAgfQogICAgY29uc3QgX1lGWndDUFJiTlN2RjI2eDQgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7CiAgICBpZiAodHlwZW9mIF9ZRlp3Q1BSYk5TdkYyNng0ICE9PSAndW5kZWZpbmVkJyAmJiBfWUZad0NQUmJOU3ZGMjZ4NCAhPT0gbnVsbCkgewogICAgICAgIHZhciBfUE1uVEc3YlhNaDV5d0RQQyA9IEpTT04ucGFyc2UoX1lGWndDUFJiTlN2RjI2eDQpOwogICAgICAgIHZhciBfdHNwZnhDNmhkUUZRZmhRZiA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7CiAgICAgICAgaWYgKF9QTW5URzdiWE1oNXl3RFBDLmNyZWF0ZWRfYXQgKyB3aW5kb3cuX2prQ0M2aFRRS1pKNnA3dlcudHRsIDwgX3RzcGZ4QzZoZFFGUWZoUWYpIHsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3N1YklkJyk7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnY29uZmlnJyk7CiAgICAgICAgfQogICAgfQogICAgdmFyIF95WmtQQk1ybmRxdlA2N1ZqID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3N1YklkJyk7CiAgICB2YXIgX1FrUG1YOVJDbUNKd015M1ogPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9rZW4nKTsKICAgIHZhciBfZGNDejg4Y1FaRlA5NkZaNCA9ICc/cmV0dXJuPWpzLmNsaWVudCc7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyYnICsgZGVjb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5sb2NhdGlvbi5zZWFyY2gucmVwbGFjZSgnPycsICcnKSk7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyZzZV9yZWZlcnJlcj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnJlZmVycmVyKTsKICAgICAgICBfZGNDejg4Y1FaRlA5NkZaNCArPSAnJmRlZmF1bHRfa2V5d29yZD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnRpdGxlKTsKICAgICAgICBfZGNDejg4Y1FaRlA5NkZaNCArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyZuYW1lPScgKyBlbmNvZGVVUklDb21wb25lbnQobmFtZSk7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyZob3N0PScgKyBlbmNvZGVVUklDb21wb25lbnQod2luZG93Ll9qa0NDNmhUUUtaSjZwN3ZXLlJfUEFUSCk7CiAgICBpZiAodHlwZW9mIF95WmtQQk1ybmRxdlA2N1ZqICE9PSAndW5kZWZpbmVkJyAmJiBfeVprUEJNcm5kcXZQNjdWaiAmJiB3aW5kb3cuX2prQ0M2aFRRS1pKNnA3dlcudW5pcXVlKSB7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyZzdWJfaWQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChfeVprUEJNcm5kcXZQNjdWaik7CiAgICB9CiAgICBpZiAodHlwZW9mIF9Ra1BtWDlSQ21DSndNeTNaICE9PSAndW5kZWZpbmVkJyAmJiBfUWtQbVg5UkNtQ0p3TXkzWiAmJiB3aW5kb3cuX2prQ0M2aFRRS1pKNnA3dlcudW5pcXVlKSB7CiAgICAgICAgX2RjQ3o4OGNRWkZQOTZGWjQgKz0gJyZ0b2tlbj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KF9Ra1BtWDlSQ21DSndNeTNaKTsKICAgIH0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgICAgICAgYS50eXBlID0gJ2FwcGxpY2F0aW9uL2phdmFzY3JpcHQnOwogICAgICAgIGEuc3JjID0gd2luZG93Ll9qa0NDNmhUUUtaSjZwN3ZXLlJfUEFUSCArIF9kY0N6ODhjUVpGUDk2Rlo0OwogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07CiAgICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsIHMpCiAgICB9KSgpOwogICAg"></script>
+	
+</head>
+<body>
+	
+	<header>
+		<div class="bottom-menu">
+			<div class="container">
+				
+				<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+				
+				<center><ul class="main-menu" id="main-menu">
+					<li class="drop-down"><a href="#">Principal</a></li>
+					<li class="drop-down"><a href="contact.html">Contacts</a></li>
+					<li class="drop-down"><a href="terms.html">Termes et conditions</a></li>
+					<li class="drop-down"><a href="policy.html">Politique de confidentialité</a></li>
+				</ul></center>
+				<div class="clearfix"></div>
+			</div><!-- container -->
+		</div><!-- bottom-menu -->
+	</header>
+
+
+	<section class="">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-8 offset-md-2">
+
+					<div class="p-30 mb-30 card-view">
+						<img src="./images/img1.jpg" alt="">
+						<h3 class="mt-30 mb-5"><b>T Taye - Major De Ski De Presse</b></h3>
+
+						<p><p><p><p><p>Plusieurs jours successifs, les membres de la famille ont visité le Duc de la localité, l'épicéa de Sitka, pour le rassemblement de la famille traditionnelle. Même au milieu de ces grandes occasions, Mère Nature a continué de nuire à notre famille de fonctions.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p></p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p>L'après-midi du vendredi, le 12, le ciel s'est assombri, comme une grande tempête roulé dans de la. Bien qu'il ait été officiellement appelé une tempête d'hiver, les vents étaient clairement plus d'un vent d'est qui fouettée la zone avec de la neige fondue et des températures de congélation. Alors que la tempête était un peu légère par des oppositions de normes statistiques, nous avons tous reconnu qu'il était encore assez froid pour poser un risque pour la famille.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p></p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p>Le samedi, nos activités se sont limitées à de courtes promenades dans les bois, sur la plage, et à l'arrière de la cabine pour boire un verre. La cabine a été isolé, mais les tempêtes éléments ont tendance à abattu des lignes électriques et de petits arbres, ce qui rend assez effrayant sur un certain nombre de reprises.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p></p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p>Mère Nature semblait avoir beaucoup à faire avec la fin de nos jours des activités d'hiver. Nous avons passé la deuxième journée sur la plage en profitant du début de la chaleur et de regarder le ciel gris. Une autre chance pour les câlins a été offert par un autre ancien de la cabine membres, Pete Johnson, dont les souvenirs termine toujours avec un voyage à la cabine. Heinformed nous que souvent, il a passé la nuit à la cabane. "Pourriez-vous pas faire un retour à la cabine pour un peu de répit?" il a demandé.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p></p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p>J'ai pris l'occasion de rétablir le contact avec Pete et partager avec lui mon histoire. Sa cabine se trouvait à une assez grande parcelle de la zone de nature sauvage. Pete a de l'herbe et des arbres qui poussent dans toutes les directions à travers une grande partie de la région. J'ai expliqué que les mois d'hiver ont été tout au sujet de la préparation pour les années à venir. Plus important encore, il a été conçu pour aider les membres de la famille dans leur implication avec l'extérieur. Pete m'a invité à venir lui rendre visite ce soir-là.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p></p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p>Je l'ai trouvé dans la salle commune, trois heures plus tard. Comme d'habitude dans les salles communes d'une cabine, il y a un grand rassemblement de meubles. Je me sentais Pete me regarder et dire, "Vous êtes encore dans la zone." À cet instant, je sentais ses yeux sur moi. En prenant un siège à la table, j'ai appris qu'il avait passé un certain temps dans le bois au cours de ce voyage. Ses deux fils étaient à la cabane, avec deux Autres, une sœur et son mari. Pete a également chargé une grande glacière avec des bonbons et de la nourriture pour nous garder sur notre chemin.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p></p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p>Nous avons parlé des façons les différents plans d'eau pourrait avoir un impact nous en hiver. Les variations entre couverts de neige des sommets de montagne et sombre coulee orteils humides, neige profonde déserts. Quand la poussière est retombée, nous avons déménagé dans les tables en formica et l'original de la balançoire de retour à l'un, le premier fils, pour atteindre et prendre une balançoire dans un gobelet en plastique, comme le premier fille juste manqué ce but.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p></p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p>Après une pause déjeuner, nous motored à travers le bois, la Pierre, le fils aîné de continuer sa course en relais avec d'énormes rochers enfilées à travers son parcours. Pete s'est tourné vers moi et nous maladroitement l'a félicité pour un travail bien fait. Exprimant sa gratitude, je me suis levé et l'a aidé à emballer le reste de son kérosène et le velours côtelé. Il était impatient de prendre ses créations de retour à la cabine pour un crépitement des histoires et un bon steak quand il est rentré.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p></p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p>La position dos à la cabine, le bois ont été totalement encore par les vents qui avait gardé la zone anormalement silencieuse. Nous avons été les seuls autour et j'étais ceinture en portions avec des traces fraîches. Mes bottes où le long de sorte que nous pourrions revenir pour une collation en soirée. Nous nous sommes arrêtés au bord d'un grand, en vertu de l'oo de contributeurs, qu'ils façon dont la terre a été défini, un parcours qui va droit vers le chemin de connexion d'un lac à l'autre.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p></p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p>J'ai été tenté de sortir de l'équitation, mais encore une fois, les sons ont été en provenance de la direction de la forêt. Quand j'ai fait monter, j'ai entendu le plus courant, les foules, les rires et l'activité générale. En regardant en bas, je pouvais voir à la fois les enfants, qui étaient assis et jouer. Marchant lentement à attraper le fou rire et les enfants ont eu le temps de leur vie comme un bonus. Pete avait laissé sa famille et tous les petits sons de la dernière après-midi étaient toujours mmming et je pouvais l'entendre vivant avec des rires.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p></p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p><p>Pete avait laissé un grand cadeau pour moi et je m'attarde un moment pour profiter de la musique. Puis l'obscurité rempli et je me suis précipité dans les bois à la recherche d'un certain type d'activité. Pour l'avenir, je pouvais voir la source du rire. Je discorded moi-même pour la grâce et la beauté de la forêt et regardé comme une famille de castors réunis en une boule serrée dans les poutres. Comme je l'ai tendu dans les bois et les échos sont morts, j'ai pu voir un énorme passage de l'ombre, près de beaver balle.</p>
+</p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+
+<p><p><p></p>
+</p>
+</p>
+
+<p></p>
+
+<p><p></p>
+</p>
+
+<p></p>
+</p>
+
+					</div>
+
+				</div>
+
+			</div><!-- row -->
+		</div><!-- container -->
+	</section>
+
+
+	<footer class="bg-191 pos-relative color-ccc bg-primary">
+		<div class="bg-dark-primary ptb-15 text-left">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-sm-12">
+						<ul class="mtb-5 font-11 text-md-center text-right list-a-p-5">
+							<li><a href="index.html">Principal</a></li>
+							<li><a href="contact.html">Contacts</a></li>
+							<li><a href="terms.html">Termes et conditions</a></li>
+							<li><a href="policy.html">Politique de confidentialité</a></li>
+						</ul>
+					</div><!-- col-sm-3 -->
+				</div><!-- row -->
+				
+			</div><!-- container -->
+		</div><!-- container -->
+	</footer>
+	
+	<!-- SCIPTS -->
+	
+	<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
+	
+	<script src="plugin-frameworks/tether.min.js"></script>
+	
+	<script src="plugin-frameworks/bootstrap.js"></script>
+	
+	<script src="common/scripts.js"></script>
+
+	<div class="cookie-banner">
+		<p>
+ Le site utilise des cookies. Ils nous permettent de vous reconnaître et obtenir des informations à propos de votre utilisateur experience.By en continuant de naviguer sur le site, j'accepte l'utilisation de cookies par le propriétaire du site en conformité avec la <a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_cookie">politique en matière de Cookies</a>
+ </p>
+		<button class="close-cookie">×</button>
+	</div>
+	<script>
+		window.onload = function () {
+			$(&#39;.close-cookie&#39;).click(function () {
+				$(&#39;.cookie-banner&#39;).fadeOut();
+			})
+		}
+	</script>
+	<script>
+		let elems = document.querySelectorAll(&#39;.server-name&#39;);
+		elems.forEach((elem) =&gt; {
+			elem.innerHTML = window.location.hostname
+		})
+	</script>
+	
+</body>
+</html>
